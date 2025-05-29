@@ -1,0 +1,98 @@
+/* Custom CSS for VitePress Theme */
+
+/* Gradient for the site title in the navbar */
+.VPNavBarTitle .title {
+  background: -webkit-linear-gradient(45deg, #42d392 25%, #647eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent; /* Standard property, though -webkit-text-fill-color is widely supported */
+  font-weight: bold; /* Optional: make it bolder */
+}
+
+/* If you also want the site title in the hero section of the homepage to be a gradient */
+.VPHero .name{
+  background: -webkit-linear-gradient(45deg, #42d392 25%, #647eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent; /* Standard property, though -webkit-text-fill-color is widely supported */
+  font-weight: bold; /* Optional: make it bolder */
+  /* Add shadow behind */
+  /* Optional: add some letter spacing */
+  letter-spacing: 2px;
+    
+}
+
+.VPHero .text {
+  /* Indent */
+  margin-left: 20px;
+  padding: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 2.5rem;
+}
+
+
+/* Ensure the logo and title are nicely aligned if needed */
+.VPNavBarTitle {
+  display: flex;
+  align-items: center;
+}
+
+/* Adjust hero logo */
+.VPImage {
+ 
+  border-radius: 10%; /* Optional: make the logo circular */
+  /*  Add a color burst behind the image */
+  background: linear-gradient(45deg, #42d392 25%, #647eff);
+  padding: 5px; /* Adjust padding to create a burst effect */
+  
+
+}
+
+.VPNavBarTitle .logo {
+  margin-right: 8px; /* Adjust spacing between logo and title text */
+  border-radius: 10%; /* Optional: make the logo circular */
+  /* zoom in */
+  
+}
+.v-card
+{
+  border-radius: 2% !important;
+}
+a {
+  color: inherit;
+  text-decoration: none !important;
+
+}
+h1#justin-schwertmann{
+
+  /* My name on top of resume page, make it stand out */
+  font-size: 2.5rem;
+  font-weight: bold;
+  /* color: #42d392; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); */
+  /* Optional: add a shadow for depth */
+  /* Optional: make it uppercase */
+  letter-spacing: 2px;
+  /* Optional: add some letter spacing */
+  /* font-family: 'Courier New', Courier, monospace; */
+  /* Optional: change font family */
+  /* background: -webkit-linear-gradient(45deg, #42d392 25%, #647eff); */
+  -webkit-background-clip: text;
+  /* -webkit-text-fill-color: transparent; */
+  background-clip: text;
+  text-fill-color: transparent;
+  /* Optional: make it bolder */
+  /* Optional: underline */
+  text-decoration-color: #42d392;
+  /* Optional: underline color */
+  text-decoration-thickness: 2px;
+  /* Optional: underline thickness */
+  /* Optional: wavy underline */
+  text-decoration-skip-ink: auto;
+
+
+}

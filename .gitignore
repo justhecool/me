@@ -1,0 +1,7 @@
+vue-portfolio/.DS_Store
+/node_modules
+/bootstrap-portfolio
+vue-portfolio/docs/public/resume.pdf
+vue-portfolio/docs/.vitepress/cache
+vue-portfolio/docs/.vitepress/dist
+vue-portfolio/node_modules/*
