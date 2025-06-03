@@ -1,9 +1,7 @@
-# Justin Schwertmann
-
+# Resume
 
 <div style="margin-top: 20px;">
-<!-- v-chip icon of email, linkedin, github, phone -->
-    <v-chip prepend-icon="mdi-email" href="mailto:justin@schwertmann.me" target="_blank"  color="#0489c9" variant="elevated">
+  <v-chip prepend-icon="mdi-email" href="mailto:justin@schwertmann.me" target="_blank"  color="#0489c9" variant="elevated">
       Email
       </v-chip>
       &nbsp;
@@ -14,13 +12,11 @@
       <v-chip prepend-icon="mdi-github" href="https://github.com/justhecool" target="_blank" color="#fafbfc" variant="elevated">
           GitHub
       </v-chip>
-
-
 </div>
 
 ## Summary
-<!-- A brief 2-3 sentence summary about yourself, your career goals, and key skills. (From your PDF or inspired by the GitHub example) -->
-A highly motivated and results-oriented Web Developer with X years of experience in...
+Web Developer with 14 years of experience delivering full-stack web solutions across diverse industries. Proficient in modern frontend and backend technologies, with deep expertise in building responsive, user-friendly applications that align with current web standards and best practices. Holds a B.S. in Computer Science from Southern Illinois University Edwardsville, with a focus on web development and artificial intelligence. Recognized for strong problem-solving skills, adaptability to emerging technologies, and a consistent record of delivering high-quality, maintainable code. A collaborative team player with excellent communication skills and a strong commitment to ongoing learning and professional growth.
+
 
 ## Skills
 
@@ -73,7 +69,6 @@ A highly motivated and results-oriented Web Developer with X years of experience
   <v-chip variant="elevated">REST APIs</v-chip>
   <v-chip variant="elevated">Agile Methodologies</v-chip>
 
-  <!-- Add more skills from your PDF, categorizing if needed -->
 
 </v-chip-group>
 
@@ -95,10 +90,9 @@ A highly motivated and results-oriented Web Developer with X years of experience
     <li>Operated industry-leading sound equipment for national and local acts, ensuring high-quality audio for audiences</li>
     <li>Assisted and communicated with bands professionally, enhancing performance coordination and satisfaction, leading to increased repeat performances.</li>
     <li>Ran movies and lighting cues for live performances, enhancing show quality and audience enjoyment.</li>
-    <!-- Add more bullet points from your PDF for this role -->
   </ul>
 </div>
-<!-- Add more experience entries as needed -->
+
 <div class="experience-entry" style="margin-bottom: 20px;">
   <h3 style="margin-bottom: 0;">Web Admin | Splotus</h3>
   <em>2011 - 2018</em>
@@ -125,15 +119,8 @@ A highly motivated and results-oriented Web Developer with X years of experience
 <!-- You can list key personal or academic projects here, or link to your main portfolio page -->
 For a detailed list of projects, please see my <a href="/portfolio">Portfolio</a>.
 
-<!-- Optional: Add a section for Certifications or Awards if relevant -->
-
+## Download Resume
 <br/>
 <v-btn href="/resume.pdf" download="resume.pdf" color="primary" prepend-icon="mdi-download">
   Download PDF Version
 </v-btn>
-<!-- Make sure you have your resume.pdf in the `docs/public` directory for this download link to work, 
-     or adjust the path if you place it elsewhere and configure VitePress assets handling.
-     A simpler way for now if it's in your repo:
-     If resume.pdf is in `/Users/justin/vue/schwertmann.me/Portfolio/vue-portfolio/docs/public/resume.pdf`
-     then the link would be `/resume.pdf`
--->

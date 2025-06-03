@@ -51,10 +51,10 @@ Welcome to my portfolio. Here are some of the projects I've worked on, showcasin
   </v-card-text>
 
   <v-card-actions>
-    <v-btn color="primary" href="#" target="_blank" prepend-icon="mdi-open-in-new">
+    <v-btn color="primary" href="https://smallworlds.app/invite/try/" target="_blank" prepend-icon="mdi-open-in-new">
       View Project
     </v-btn>
-    <v-btn color="secondary" href="#" target="_blank" prepend-icon="mdi-github">
+    <v-btn color="secondary" href="#" target="_blank" prepend-icon="mdi-github" disabled>
       Source Code
     </v-btn>
   </v-card-actions>
@@ -138,9 +138,7 @@ On the project I was involved with, uploading the photograph, switching between 
   </v-card-item>
 
   <v-card-text>
-    <!-- Splotus was a website that shared photos using a forum which had tight php integration with wordpress and also included a wiki for the game SmallWorlds -->
-    Splotus was a community-driven platform designed to share and discover creative content, particularly focused on the SmallWorlds game. The site featured a forum for discussions, a photo-sharing section, and a wiki for game-related information. It was built using the Polymer library and integrated tightly with WordPress for content management.
-    The platform allowed users to upload and share photos, engage in discussions, and contribute to the wiki, fostering a vibrant community around SmallWorlds.
+    Splotus.com was a community-run site for fans of SmallWorlds.com, built to share and explore creative content. It featured a forum for conversations, a photo section where players could upload snapshots from the game, and a wiki with helpful info and guides. The site was built using the Polymer library and used WordPress for managing content. It gave players a space to connect, share, and contribute, helping to build a strong, creative SmallWorlds community.
   </v-card-text>
 
 
