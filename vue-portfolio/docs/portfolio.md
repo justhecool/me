@@ -54,7 +54,7 @@ Welcome to my portfolio. Here are some of the projects I've worked on, showcasin
     <v-btn color="primary" href="https://smallworlds.app/invite/try/" target="_blank" prepend-icon="mdi-open-in-new">
       View Project
     </v-btn>
-    <v-btn color="secondary" href="#" target="_blank" prepend-icon="mdi-github" disabled>
+    <v-btn color="secondary" href="https://github.com/justhecool/smallworlds-forever" target="_blank" prepend-icon="mdi-github">
       Source Code
     </v-btn>
   </v-card-actions>
