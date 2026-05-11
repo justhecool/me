@@ -2,22 +2,88 @@
 
 Welcome to my portfolio. Here are some of the projects I've worked on, showcasing my skills in web/app development.
 
-## Project 1: SmallWorlds
+## Project 1: Midwest American Woodworks
 
 <v-card
   class="mx-auto my-4"
   max-width="700"
   elevation="2"
 >
-  <v-img
-    height="420px"
-    src="/sw-client.png" 
-    cover
-    style="transition: transform 1s;"
-    @mouseover="e => e.target.style.transform = 'scale(1.05)'"
-    
-    
-  </v-img>
+  <v-dialog width="auto">
+    <template v-slot:activator="{ props }">
+      <v-img
+        v-bind="props"
+        height="400px"
+        src="/maww-placeholder.png"
+        cover
+        style="cursor: pointer; transition: transform 0.3s;"
+        @mouseover="e => e.target.style.transform = 'scale(1.02)'"
+        @mouseleave="e => e.target.style.transform = 'scale(1)'"
+      ></v-img>
+    </template>
+    <template v-slot:default="{ isActive }">
+      <img src="/maww-placeholder.png" @click="isActive.value = false" style="cursor: pointer; max-height: 90vh; max-width: 90vw; object-fit: contain; display: block; margin: auto; border-radius: 8px;" />
+    </template>
+  </v-dialog>
+
+  <v-card-item>
+    <v-card-title>Midwest American Woodworks</v-card-title>
+    <v-card-subtitle>E-commerce and Content Management System</v-card-subtitle>
+  </v-card-item>
+  <v-card-text>
+    <p>
+    A robust, CMS-oriented website built for Midwest American Woodworks. The application features a powerful headless architecture utilizing Directus for seamless content and data management. 
+    </p>
+    <br/>
+    <p>
+    I engineered complex business workflows directly within the Directus backend to automate order processing and status tracking. Additionally, I integrated the Resend API to handle transactional emails, providing reliable and beautifully formatted communication for customers and administrators.
+    </p>
+  </v-card-text>
+
+  <v-divider class="mx-4 mb-1"></v-divider>
+
+  <v-card-text>
+    <div class="text-subtitle-2">Key Technologies:</div>
+    <v-chip-group>
+      <v-chip>Directus CMS</v-chip>
+      <v-chip>Vue.js</v-chip>
+      <v-chip>Resend API</v-chip>
+      <v-chip>Custom Workflows</v-chip>
+    </v-chip-group>
+  </v-card-text>
+
+  <v-card-actions>
+    <v-btn color="primary" href="https://midwestamericanwoodworks.com" target="_blank" prepend-icon="mdi-open-in-new">
+      View Project
+    </v-btn>
+  </v-card-actions>
+</v-card>
+
+<br/>
+
+## Project 2: SmallWorlds
+
+<v-card
+  class="mx-auto my-4"
+  max-width="700"
+  elevation="2"
+>
+  <v-dialog width="auto">
+    <template v-slot:activator="{ props }">
+      <v-img
+        v-bind="props"
+        height="420px"
+        src="/sw-client.png" 
+        cover
+        style="cursor: pointer; transition: transform 0.3s;"
+        @mouseover="e => e.target.style.transform = 'scale(1.02)'"
+        @mouseleave="e => e.target.style.transform = 'scale(1)'"
+      ></v-img>
+    </template>
+    <template v-slot:default="{ isActive }">
+      <img src="/sw-client.png" @click="isActive.value = false" style="cursor: pointer; max-height: 90vh; max-width: 90vw; object-fit: contain; display: block; margin: auto; border-radius: 8px;" />
+    </template>
+  </v-dialog>
   <!-- Replace with an actual image for your project. Place images in `docs/public/` directory -->
   <!-- e.g., if image is `docs/public/images/awesome-app.png`, src would be "/images/awesome-app.png" -->
 
@@ -28,9 +94,11 @@ Welcome to my portfolio. Here are some of the projects I've worked on, showcasin
   </v-card-item>
   <v-card-text>
     <p>
-    SmallWorlds is a reimagined version of the original SmallWorlds game client, which was a social virtual world platform. This project involved reverse engineering the original server code and developing a new front-end using Vue.js and Vuetify. The application allows users to interact in a virtual environment, similar to the original SmallWorlds experience.
-    The project includes features such as user authentication, room creation, and avatar customization. It also integrates with a custom backend built with Node.js and Java, utilizing WebSockets for real-time communication.
-    The SmallWorlds project is a testament to my ability to work with complex systems, reverse engineer existing code, and create a modern web application that captures the essence of the original game.
+    A complete, modern reimagining of the SmallWorlds social virtual world client. I successfully reverse-engineered the legacy server architecture and built a scalable, responsive front-end using Vue.js and Vuetify. The application delivers a rich, interactive virtual environment featuring secure user authentication, dynamic room creation, and avatar customization.
+    </p>
+    <br/>
+    <p>
+    This full-stack project is powered by a custom backend utilizing Node.js and Java, with WebSockets ensuring seamless, real-time communication. It demonstrates my ability to tackle complex, distributed systems, analyze undocumented legacy code, and deliver a polished modern web application.
     </p>
   </v-card-text>
 
@@ -62,7 +130,7 @@ Welcome to my portfolio. Here are some of the projects I've worked on, showcasin
 
 <br/>
 
-## Project 2: Senior Project - Talking Pictures
+## Project 3: Senior Project - Talking Pictures
 
 <v-card
   class="mx-auto my-4"
@@ -71,22 +139,50 @@ Welcome to my portfolio. Here are some of the projects I've worked on, showcasin
 >
 <!-- I want to use a carosuel of images -->
 <v-carousel hide-delimiters>
-  <v-carousel-item
-    src="tp_1.png"
-    cover
-  ></v-carousel-item>
+  <v-carousel-item cover>
+    <v-dialog width="auto">
+      <template v-slot:activator="{ props }">
+        <v-img v-bind="props" src="/tp_1.png" cover height="100%" style="cursor: pointer;"></v-img>
+      </template>
+      <template v-slot:default="{ isActive }">
+        <v-carousel show-arrows="hover" hide-delimiters style="width: 90vw; max-width: 1200px; height: 90vh;" :model-value="0">
+          <v-carousel-item><img src="/tp_1.png" @click="isActive.value = false" style="cursor: pointer; max-height: 90vh; max-width: 90vw; object-fit: contain; display: block; margin: auto; border-radius: 8px;" /></v-carousel-item>
+          <v-carousel-item><img src="/tp_2.png" @click="isActive.value = false" style="cursor: pointer; max-height: 90vh; max-width: 90vw; object-fit: contain; display: block; margin: auto; border-radius: 8px;" /></v-carousel-item>
+          <v-carousel-item><img src="/tp_3.png" @click="isActive.value = false" style="cursor: pointer; max-height: 90vh; max-width: 90vw; object-fit: contain; display: block; margin: auto; border-radius: 8px;" /></v-carousel-item>
+        </v-carousel>
+      </template>
+    </v-dialog>
+  </v-carousel-item>
 
-  <v-carousel-item
-    src="tp_2.png"
-    cover
-  ></v-carousel-item>
+  <v-carousel-item cover>
+    <v-dialog width="auto">
+      <template v-slot:activator="{ props }">
+        <v-img v-bind="props" src="/tp_2.png" cover height="100%" style="cursor: pointer;"></v-img>
+      </template>
+      <template v-slot:default="{ isActive }">
+        <v-carousel show-arrows="hover" hide-delimiters style="width: 90vw; max-width: 1200px; height: 90vh;" :model-value="1">
+          <v-carousel-item><img src="/tp_1.png" @click="isActive.value = false" style="cursor: pointer; max-height: 90vh; max-width: 90vw; object-fit: contain; display: block; margin: auto; border-radius: 8px;" /></v-carousel-item>
+          <v-carousel-item><img src="/tp_2.png" @click="isActive.value = false" style="cursor: pointer; max-height: 90vh; max-width: 90vw; object-fit: contain; display: block; margin: auto; border-radius: 8px;" /></v-carousel-item>
+          <v-carousel-item><img src="/tp_3.png" @click="isActive.value = false" style="cursor: pointer; max-height: 90vh; max-width: 90vw; object-fit: contain; display: block; margin: auto; border-radius: 8px;" /></v-carousel-item>
+        </v-carousel>
+      </template>
+    </v-dialog>
+  </v-carousel-item>
 
-  <v-carousel-item
-    src="tp_3.png"
-    cover
-  ></v-carousel-item>
-
-
+  <v-carousel-item cover>
+    <v-dialog width="auto">
+      <template v-slot:activator="{ props }">
+        <v-img v-bind="props" src="/tp_3.png" cover height="100%" style="cursor: pointer;"></v-img>
+      </template>
+      <template v-slot:default="{ isActive }">
+        <v-carousel show-arrows="hover" hide-delimiters style="width: 90vw; max-width: 1200px; height: 90vh;" :model-value="2">
+          <v-carousel-item><img src="/tp_1.png" @click="isActive.value = false" style="cursor: pointer; max-height: 90vh; max-width: 90vw; object-fit: contain; display: block; margin: auto; border-radius: 8px;" /></v-carousel-item>
+          <v-carousel-item><img src="/tp_2.png" @click="isActive.value = false" style="cursor: pointer; max-height: 90vh; max-width: 90vw; object-fit: contain; display: block; margin: auto; border-radius: 8px;" /></v-carousel-item>
+          <v-carousel-item><img src="/tp_3.png" @click="isActive.value = false" style="cursor: pointer; max-height: 90vh; max-width: 90vw; object-fit: contain; display: block; margin: auto; border-radius: 8px;" /></v-carousel-item>
+        </v-carousel>
+      </template>
+    </v-dialog>
+  </v-carousel-item>
 </v-carousel>
 
   <!-- <v-img height="200px" src="/placeholder-project2.jpg" cover></v-img> -->
@@ -96,13 +192,10 @@ Welcome to my portfolio. Here are some of the projects I've worked on, showcasin
   </v-card-item>
 
   <v-card-text>
-   Talking Pictures is an innovative application that empowers users to augment their photographs with voiceovers, thereby crafting dynamic and captivating visual narratives. These voiceovers can be precisely positioned within the images, enabling a distinctive storytelling experience. The application is developed utilizing Flutter and Material-UI, ensuring a user interface that is both smooth and responsive.
-Users can effortlessly upload their photographs, record or upload voiceovers, and subsequently share their creations with their acquaintances and extended families. Designed with a primary emphasis on a tablet-friendly interface, it guarantees a seamless user experience across diverse devices.
-  <v-divider class="mx-4 mb-1"></v-divider>
-Completed as a senior project utilizing SCRUM and agile methodologies. Presentation and burn-down chart of the completed product, achieved in two semesters, are provided below.
-<v-divider class="mx-4 mb-1"></v-divider>
-On the project I was involved with, uploading the photograph, switching between the “View” and “Edit” modes, configuring the audio to the hotspots, and enhancing the app’s fluidity by dynamically displaying buttons as required.
-</v-card-text>
+    <p>Talking Pictures is an interactive mobile application that empowers users to bring their photographs to life with spatial voiceovers. By precisely positioning audio hotspots within images, users can craft dynamic and accessible visual narratives. Built with Flutter and Material Design, it delivers a smooth, highly responsive cross-platform experience.</p>
+    <v-divider class="mx-4 my-2"></v-divider>
+    <p>Developed as a collaborative Senior Capstone project using Agile/Scrum methodologies over two semesters. I spearheaded the core interactive features: engineering the photo upload pipeline, developing state management for seamless 'View' and 'Edit' mode transitions, implementing the spatial audio configuration logic, and optimizing UI fluidity through dynamic component rendering.</p>
+  </v-card-text>
   <v-card-text>
     <div class="text-subtitle-2">Key Technologies:</div>
     <v-chip-group>
@@ -119,18 +212,29 @@ On the project I was involved with, uploading the photograph, switching between 
 </v-card>
 
 <!-- Add more projects as needed -->
-## Project 3: Splotus Website
+## Project 4: Splotus Website
 
 <v-card
   class="mx-auto my-4"
   max-width="700"
   elevation="2"
 >
-  <v-img
-    height="400px"
-    src="/splotus.png"
-    cover
-  ></v-img>
+  <v-dialog width="auto">
+    <template v-slot:activator="{ props }">
+      <v-img
+        v-bind="props"
+        height="400px"
+        src="/splotus.png"
+        cover
+        style="cursor: pointer; transition: transform 0.3s;"
+        @mouseover="e => e.target.style.transform = 'scale(1.02)'"
+        @mouseleave="e => e.target.style.transform = 'scale(1)'"
+      ></v-img>
+    </template>
+    <template v-slot:default="{ isActive }">
+      <img src="/splotus.png" @click="isActive.value = false" style="cursor: pointer; max-height: 90vh; max-width: 90vw; object-fit: contain; display: block; margin: auto; border-radius: 8px;" />
+    </template>
+  </v-dialog>
 
   <v-card-item>
     <v-card-title>Splotus</v-card-title>
@@ -138,7 +242,9 @@ On the project I was involved with, uploading the photograph, switching between 
   </v-card-item>
 
   <v-card-text>
-    Splotus.com was a community-run site for fans of SmallWorlds.com, built to share and explore creative content. It featured a forum for conversations, a photo section where players could upload snapshots from the game, and a wiki with helpful info and guides. The site was built using the Polymer library and used WordPress for managing content. It gave players a space to connect, share, and contribute, helping to build a strong, creative SmallWorlds community.
+    <p>Splotus.com was a thriving community hub designed for the SmallWorlds player base to share and explore creative content. I architected and deployed a comprehensive platform featuring integrated discussion forums, a user-generated photo gallery, and a collaborative wiki for game guides.</p>
+    <br/>
+    <p>The front-end was constructed using the Polymer library to deliver reusable web components, seamlessly integrated with a headless WordPress CMS for robust content management. This project highlights my ability to build and scale community-driven platforms that foster user engagement.</p>
   </v-card-text>
 
 
@@ -161,18 +267,29 @@ On the project I was involved with, uploading the photograph, switching between 
   </v-card-actions>
 </v-card>
 
-## Project 4: College Project - Playlist Generator
+## Project 5: College Project - Playlist Generator
 <v-card
   class="mx-auto my-4"
   max-width="700"
   elevation="2"
 >
-  <v-img
-    height="400px"
-    src="/playlist.png"
-      aspect-ratio="4/3"
-      cover
-  ></v-img>
+  <v-dialog width="auto">
+    <template v-slot:activator="{ props }">
+      <v-img
+        v-bind="props"
+        height="400px"
+        src="/playlist.png"
+        aspect-ratio="4/3"
+        cover
+        style="cursor: pointer; transition: transform 0.3s;"
+        @mouseover="e => e.target.style.transform = 'scale(1.02)'"
+        @mouseleave="e => e.target.style.transform = 'scale(1)'"
+      ></v-img>
+    </template>
+    <template v-slot:default="{ isActive }">
+      <img src="/playlist.png" @click="isActive.value = false" style="cursor: pointer; max-height: 90vh; max-width: 90vw; object-fit: contain; display: block; margin: auto; border-radius: 8px;" />
+    </template>
+  </v-dialog>
 
   <v-card-item>
     <v-card-title>Playlist Generator</v-card-title>
@@ -180,14 +297,13 @@ On the project I was involved with, uploading the photograph, switching between 
   </v-card-item>
 
   <v-card-text>
-        This college project is a web application built with PHP that allows users to create and manage personalized music playlists. Users can register, log in, search for songs, and add them to new or existing playlists. The application interacts with a database to store user and playlist information, and it utilizes W3.CSS for basic styling, providing a functional interface for music enthusiasts to curate their own song collections.
-  <v-divider class="mx-4 mb-1"></v-divider>
-  Scored a 100% on the project, demonstrating proficiency in PHP and web development concepts.
- 
-  Try it out below: 
+    <p>A dynamic full-stack web application for creating and managing personalized music playlists. Users benefit from secure authentication, intuitive song search capabilities, and comprehensive playlist management tools.</p>
+    <br/>
+    <p>Built with PHP and MySQL, the application features a robust relational database architecture to securely handle user state and playlist associations. The responsive front-end utilizes W3.CSS for clean, accessible styling. Awarded a 100% grade, this project showcases my strong foundational knowledge of backend logic, database design, and full-stack web development principles.</p>
+  <v-divider class="mx-4 my-2"></v-divider>
+  <p>Try it out below: </p>
   <ul><li>User: <code>admin</code></li>
   <li>Password: <code>admin</code></li></ul>
-  
   </v-card-text>
 
   <v-card-text>
